@@ -1,6 +1,6 @@
 {
   "name": "xapi-url-shortener",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "An xAPI URL shortenenr",
   "main": "dist/presenter/express/server.js",
   "typings": "dist/presenter/express/server.d.ts",
@@ -9,6 +9,11 @@
     "type": "git",
     "url": "https://github.com/LearningLocker/url-shortener.git"
   },
+  "files": [
+    "dist",
+    ".env.example",
+    "package-lock.json"
+  ],
   "scripts": {
     "commit": "git-cz",
     "build": "tsc",
@@ -22,7 +27,8 @@
     "rollback": "node dist/rollback.js",
     "migrate": "node dist/migrate.js",
     "lint": "tslint -p ./tsconfig.json",
-    "duplication": "jscpd"
+    "duplication": "jscpd",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "engines": {
     "node": "^8.0.0",
@@ -66,6 +72,7 @@
     "tslint": "^5.5.0",
     "tslint-consistent-codestyle": "^1.6.0",
     "tslint-immutable": "^4.0.2",
-    "typescript": "^2.0.0"
+    "typescript": "^2.0.0",
+    "semantic-release": "^7.0.2"
   }
 }

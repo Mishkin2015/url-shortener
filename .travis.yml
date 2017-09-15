@@ -1,6 +1,9 @@
 language: node_js
 node_js: node
 sudo: false
+cache:
+  directories:
+    - node_modules
 services:
   - mysql
 before_script:
@@ -8,8 +11,11 @@ before_script:
   - mysql -e "CREATE USER 'urlshortener'@'127.0.0.1' IDENTIFIED BY 'pword';" -uroot
   - mysql -e "GRANT ALL PRIVILEGES ON * . * TO 'urlshortener'@'127.0.0.1';" -uroot
   - mysql -e "FLUSH PRIVILEGES;" -uroot
+  - npm prune
 script:
   - npm run build
   - npm run cover
   - npm run lint -- -c tslint.travis.json
   - npm run duplication -- --limit=0.01
+after_success:
+  - npm run semantic-release
