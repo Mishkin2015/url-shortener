@@ -1,0 +1,71 @@
+{
+  "name": "xapi-url-shortener",
+  "version": "0.0.0",
+  "description": "An xAPI URL shortenenr",
+  "main": "dist/presenter/express/server.js",
+  "typings": "dist/presenter/express/server.d.ts",
+  "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LearningLocker/url-shortener.git"
+  },
+  "scripts": {
+    "commit": "git-cz",
+    "build": "tsc",
+    "start": "node dist/presenter/express/server.js",
+    "test": "mocha $(find dist -name '*.test.js') --timeout 6000",
+    "test-mongo": "MODELS_REPO=mongo npm run test",
+    "test-memory": "MODELS_REPO=memory npm run test",
+    "test-all": "npm run test-memory && npm run test-mongo",
+    "cover": "nyc --lines 100 --check-coverage --exclude '(dist/utils/config.js)' npm run test-all",
+    "clean": "rimraf dist",
+    "rollback": "node dist/rollback.js",
+    "migrate": "node dist/migrate.js",
+    "lint": "tslint -p ./tsconfig.json",
+    "duplication": "jscpd"
+  },
+  "engines": {
+    "node": "^8.0.0",
+    "npm": "^5.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "btoa": "^1.1.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "jscommons": "git+https://git@github.com/HT2-Labs/jscommons.git",
+    "knex": "^0.13.0",
+    "mocha": "^3.5.3",
+    "mysql": "^2.14.1",
+    "node-fetch": "^1.7.3",
+    "ramda": "^0.24.1",
+    "source-map-support": "^0.4.11"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^4.0.0",
+    "@types/express": "^4.0.35",
+    "@types/knex": "0.0.61",
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.6",
+    "@types/node-fetch": "^1.6.7",
+    "@types/ramda": "^0.24.11",
+    "@types/request-ip": "0.0.31",
+    "@types/source-map-support": "^0.2.28",
+    "@types/supertest": "^2.0.3",
+    "@types/winston": "^2.3.5",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "jscpd": "git://github.com/ryansmith94/jscpd.git#prepublish",
+    "request-ip": "^2.0.2",
+    "rimraf": "^2.6.2",
+    "supertest": "^3.0.0",
+    "tslint": "^5.5.0",
+    "tslint-consistent-codestyle": "^1.6.0",
+    "tslint-immutable": "^4.0.2",
+    "typescript": "^2.0.0"
+  }
+}

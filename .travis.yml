@@ -1,0 +1,15 @@
+language: node_js
+node_js: node
+sudo: false
+services:
+  - mysql
+before_script:
+  - mysql -e "CREATE DATABASE IF NOT EXISTS urlshortener;" -uroot
+  - mysql -e "CREATE USER 'urlshortener'@'127.0.0.1' IDENTIFIED BY 'pword';" -uroot
+  - mysql -e "GRANT ALL PRIVILEGES ON * . * TO 'urlshortener'@'127.0.0.1';" -uroot
+  - mysql -e "FLUSH PRIVILEGES;" -uroot
+script:
+  - npm run build
+  - npm run cover
+  - npm run lint -- -c tslint.travis.json
+  - npm run duplication -- --limit=0.01

@@ -1,0 +1,1 @@
+export const TEMPORARY_REDIRECT_307_HTTP_CODE = 307;
