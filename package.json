@@ -19,10 +19,7 @@
     "build": "tsc",
     "start": "node dist/presenter/express/server.js",
     "test": "mocha $(find dist -name '*.test.js') --timeout 6000",
-    "test-mongo": "MODELS_REPO=mongo npm run test",
-    "test-memory": "MODELS_REPO=memory npm run test",
-    "test-all": "npm run test-memory && npm run test-mongo",
-    "cover": "nyc --lines 100 --check-coverage --exclude '(dist/utils/config.js)' npm run test-all",
+    "cover": "nyc --lines 100 --check-coverage --exclude '(dist/utils/config.js)' npm run test",
     "clean": "rimraf dist",
     "rollback": "node dist/rollback.js",
     "migrate": "node dist/migrate.js",
@@ -66,13 +63,14 @@
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
     "jscpd": "git://github.com/ryansmith94/jscpd.git#prepublish",
+    "nyc": "^11.2.1",
     "request-ip": "^2.0.2",
     "rimraf": "^2.6.2",
+    "semantic-release": "^7.0.2",
     "supertest": "^3.0.0",
     "tslint": "^5.5.0",
     "tslint-consistent-codestyle": "^1.6.0",
     "tslint-immutable": "^4.0.2",
-    "typescript": "^2.0.0",
-    "semantic-release": "^7.0.2"
+    "typescript": "^2.0.0"
   }
 }

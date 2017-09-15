@@ -26,9 +26,11 @@ export default (config: Config): Signature => {
     const { lrsEndpoint, lrsKey, lrsSecret } = await config.repo.getClientById({ id: clientId });
     config.repo.sendStatement({ statement, lrsEndpoint, lrsKey, lrsSecret })
       .then(() => {
+        /* istanbul ignore next */
         config.logger.debug(`Sent statement for "${shortUrl}"`);
       })
       .catch((err) => {
+        /* istanbul ignore next */
         config.logger.error(err);
       });
     return { longUrl };

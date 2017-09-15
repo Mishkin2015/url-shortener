@@ -18,6 +18,7 @@ export default (_config: Config): Signature => {
       method: 'POST',
     });
 
+    /* istanbul ignore next */
     if (res.status !== OK_200_HTTP_CODE) {
       throw new Error('Failed to send statement');
     }

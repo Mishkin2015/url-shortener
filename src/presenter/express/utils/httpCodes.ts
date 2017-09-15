@@ -1,1 +1,2 @@
 export const TEMPORARY_REDIRECT_307_HTTP_CODE = 307;
+export const NOT_FOUND_404_HTTP_CODE = 404;
