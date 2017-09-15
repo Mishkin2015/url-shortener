@@ -1,4 +1,6 @@
 # xAPI URL Shortener
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/LearningLocker/url-shortener.svg)](https://greenkeeper.io/)
 > A server for xAPI URL shortener
 
 [![Build Status](https://travis-ci.org/LearningLocker/url-shortener.svg?branch=master)](https://travis-ci.org/LearningLocker/url-shortener)
