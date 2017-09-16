@@ -14,3 +14,10 @@
 1. Build the code `npm run build`.
 1. Run migrations `npm run migrate`.
 1. Start the server `npm start`.
+
+## Docker
+You can use the command below, but note that you will need to pass through an env file.
+
+```sh
+docker pull learninglocker/url-shortener:master && docker run -d -p 8080:80 --name app learninglocker/url-shortener:master && docker ps -a
+```
