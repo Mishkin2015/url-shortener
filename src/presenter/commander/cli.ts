@@ -33,7 +33,6 @@ const presenter = presenterFacade({
   service,
 });
 
-console.log(process.argv);
 presenter.parse(process.argv);
 
 process.on('exit', handleExit('exit'));
