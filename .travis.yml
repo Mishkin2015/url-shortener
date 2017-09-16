@@ -21,6 +21,7 @@ script:
   - npm run lint -- -c tslint.travis.json
   - npm run duplication -- --limit=0.01
 after_success:
+  - npm prune --production
   - npm run semantic-release
   - greenkeeper-lockfile-upload
   - if [[ "$TRAVIS_BRANCH" =~ (master|^v[0-9]+) ]] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
