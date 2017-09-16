@@ -47,6 +47,7 @@
     "mysql": "^2.14.1",
     "node-fetch": "^1.7.3",
     "ramda": "^0.24.1",
+    "request-ip": "^2.0.2",
     "source-map-support": "^0.4.11"
   },
   "devDependencies": {
@@ -65,7 +66,6 @@
     "cz-conventional-changelog": "^2.0.0",
     "jscpd": "git://github.com/ryansmith94/jscpd.git#prepublish",
     "nyc": "^11.2.1",
-    "request-ip": "^2.0.2",
     "rimraf": "^2.6.2",
     "semantic-release": "^8.0.0",
     "supertest": "^3.0.0",

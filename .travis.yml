@@ -22,10 +22,9 @@ script:
   - npm run duplication -- --limit=0.01
 after_success:
   - npm run semantic-release
-  - node -e "console.log(require('./package.json').version);"
   - greenkeeper-lockfile-upload
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+  - if [ "$TRAVIS_BRANCH" =~ (master|^v\d+) ]; then
     docker build -t learninglocker/url-shortener .;
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push learninglocker/url-shortener;
+    docker push learninglocker/url-shortener:$($TRAVIS_BRANCH);
     fi
