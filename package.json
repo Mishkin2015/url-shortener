@@ -15,6 +15,7 @@
     "package-lock.json"
   ],
   "scripts": {
+    "acp": "git add -A && npm run commit && git push",
     "commit": "git-cz",
     "build": "tsc",
     "start": "node dist/presenter/express/server.js",
