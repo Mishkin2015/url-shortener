@@ -9,7 +9,7 @@ interface Opts {
 
 export default (config: Config) => {
   return async ({ lrsEndpoint, lrsKey, lrsSecret, name }: Opts) => {
-    await config.service.createClient({ lrsEndpoint, lrsKey, lrsSecret, name });
-    config.logger.info('Successfully created link');
+    const { id } = await config.service.createClient({ lrsEndpoint, lrsKey, lrsSecret, name });
+    config.logger.info(`Successfully created client "${id}"`);
   };
 };
