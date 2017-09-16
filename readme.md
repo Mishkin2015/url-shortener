@@ -15,7 +15,7 @@
 1. Run migrations `npm run migrate`.
 1. Start the server `npm start`.
 
-## Docker
+### Docker
 You can use the command below, but note that you will need to pass through an env file.
 
 ```sh
