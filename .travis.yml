@@ -20,10 +20,12 @@ script:
   - npm run cover
   - npm run lint -- -c tslint.travis.json
   - npm run duplication -- --limit=0.01
+  - node -e "console.log(require('./package.json').version);"
 after_success:
   - npm run semantic-release
   - greenkeeper-lockfile-upload
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker build -t learninglocker/url-shortener .
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push learninglocker/url-shortener;
+    docker push learninglocker/url-shortener
     fi
