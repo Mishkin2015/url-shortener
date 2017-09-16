@@ -23,7 +23,7 @@ script:
 after_success:
   - npm run semantic-release
   - greenkeeper-lockfile-upload
-  - if [[ "$TRAVIS_BRANCH" =~ (master|^v\d+) ]]; then
+  - if [[ "$TRAVIS_BRANCH" =~ (master|^v\d+) ]] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker build -t learninglocker/url-shortener:$TRAVIS_BRANCH .;
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push learninglocker/url-shortener:$TRAVIS_BRANCH;
