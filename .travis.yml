@@ -26,5 +26,5 @@ after_success:
   - if [ "$TRAVIS_BRANCH" =~ (master|^v\d+) ]; then
     docker build -t learninglocker/url-shortener .;
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push learninglocker/url-shortener:$($TRAVIS_BRANCH);
+    docker push learninglocker/url-shortener:$TRAVIS_BRANCH;
     fi
