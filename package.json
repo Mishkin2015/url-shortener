@@ -28,6 +28,9 @@
     "duplication": "jscpd",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
+  "bin": {
+    "xus": "./bin/xus.js"
+  },
   "engines": {
     "node": "^8.0.0",
     "npm": "^5.0.0"
@@ -39,6 +42,7 @@
   },
   "dependencies": {
     "btoa": "^1.1.2",
+    "commander": "^2.11.0",
     "dotenv": "^4.0.0",
     "express": "^4.14.1",
     "jscommons": "git+https://git@github.com/HT2-Labs/jscommons.git",
@@ -51,6 +55,7 @@
     "source-map-support": "^0.4.11"
   },
   "devDependencies": {
+    "@types/commander": "^2.9.2",
     "@types/dotenv": "^4.0.0",
     "@types/express": "^4.0.35",
     "@types/knex": "0.0.61",
