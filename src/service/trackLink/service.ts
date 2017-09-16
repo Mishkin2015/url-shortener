@@ -14,6 +14,9 @@ export default (config: Config): Signature => {
       },
       object: {
         definition: {
+          extensions: {
+            'http://github.com/LearningLocker/url-shortener/shortUrl': shortUrl,
+          },
           type: 'http://activitystrea.ms/schema/1.0/page',
         },
         id: longUrl,
