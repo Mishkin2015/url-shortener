@@ -15,9 +15,22 @@
 1. Run migrations `npm run migrate`.
 1. Start the server `npm start`.
 
-### Docker
-You can use the command below, but note that you will need to pass through an env file.
+### Development
+1. Follow [the installation procedure](#installation).
+1. Make your changes to the "src" directory.
+1. Build the code `npm run build`.
+1. Test the code `npm test`.
+1. Run the server `npm start`.
+1. Use the CLI `npm link` and `xus --help`.
 
-```sh
-docker pull learninglocker/url-shortener:master && docker run -d -p 8080:80 --name app learninglocker/url-shortener:master && docker ps -a
-```
+### Docker
+You can use the steps below to install and run the xAPI URL Shortener.
+
+- Create a ".env" file using the ".env.example" file in this Github repository.
+- Pull the image from DockerHub `docker pull learninglocker/url-shortener:master`.
+- Run the image in a container `docker run -d -p 8080:80 --name xus --env-file .env learninglocker/url-shortener:master`.
+
+To use the CLI you can use the steps below.
+
+- Enter the container `docker exec -it xus bash`.
+- Use the CLI `xus --help`.
