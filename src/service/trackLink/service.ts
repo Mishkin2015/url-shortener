@@ -2,20 +2,35 @@ import { defaultTo } from 'ramda';
 import Config from '../utils/Config';
 import Signature from './Signature';
 
+const HOME_PAGE = 'https://github.com/LearningLocker/url-shortener';
+
 export default (config: Config): Signature => {
-  return async ({ shortUrl, ipAddress }) => {
+  return async ({ shortUrl, ipAddress, userAgent }) => {
     const { longUrl, clientId } = await config.repo.getLinkByShortUrl({ shortUrl });
     const statement: any = {
       actor: {
         account: {
-          homePage: 'https://github.com/LearningLocker/url-shortener',
+          homePage: HOME_PAGE,
           name: defaultTo('unknown', ipAddress),
+        },
+      },
+      context: {
+        extensions: {
+          [`${HOME_PAGE}/useragent/source`]: userAgent.source,
+          [`${HOME_PAGE}/useragent/device/family`]: userAgent.device.family,
+          [`${HOME_PAGE}/useragent/device/patch`]: userAgent.device.patch,
+          [`${HOME_PAGE}/useragent/device/minor`]: userAgent.device.minor,
+          [`${HOME_PAGE}/useragent/device/major`]: userAgent.device.major,
+          [`${HOME_PAGE}/useragent/os/family`]: userAgent.os.family,
+          [`${HOME_PAGE}/useragent/os/patch`]: userAgent.os.patch,
+          [`${HOME_PAGE}/useragent/os/minor`]: userAgent.os.minor,
+          [`${HOME_PAGE}/useragent/os/major`]: userAgent.os.major,
         },
       },
       object: {
         definition: {
           extensions: {
-            'http://github.com/LearningLocker/url-shortener/shortUrl': shortUrl,
+            [`${HOME_PAGE}/shortUrl`]: shortUrl,
           },
           type: 'http://activitystrea.ms/schema/1.0/page',
         },

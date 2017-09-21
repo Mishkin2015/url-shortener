@@ -52,7 +52,8 @@
     "node-fetch": "^1.7.3",
     "ramda": "^0.24.1",
     "request-ip": "^2.0.2",
-    "source-map-support": "^0.4.11"
+    "source-map-support": "^0.4.11",
+    "useragent": "^2.2.1"
   },
   "devDependencies": {
     "@types/commander": "^2.9.2",
@@ -66,6 +67,7 @@
     "@types/request-ip": "0.0.31",
     "@types/source-map-support": "^0.4.0",
     "@types/supertest": "^2.0.3",
+    "@types/useragent": "^2.1.1",
     "@types/winston": "^2.3.5",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",

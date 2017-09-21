@@ -1,8 +1,10 @@
+import * as useragent from 'useragent';
 import Member from '../../utils/Member';
 
 export interface Opts {
   readonly ipAddress?: string;
   readonly shortUrl: string;
+  readonly userAgent: useragent.Agent;
 }
 
 export interface Result {
