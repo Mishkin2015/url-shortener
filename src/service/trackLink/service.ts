@@ -19,10 +19,10 @@ export default (config: Config): Signature => {
           [`${HOME_PAGE}/useragent/source`]: userAgent.source,
           [`${HOME_PAGE}/useragent/device/family`]: userAgent.device.family,
           [`${HOME_PAGE}/useragent/device/source`]: userAgent.device.toString(),
-          [`${HOME_PAGE}/useragent/device/version`]: userAgent.device.toVersion(),
+          [`${HOME_PAGE}/useragent/device/version`]: Number(userAgent.device.major),
           [`${HOME_PAGE}/useragent/os/family`]: userAgent.os.family,
           [`${HOME_PAGE}/useragent/os/source`]: userAgent.os.toString(),
-          [`${HOME_PAGE}/useragent/os/version`]: userAgent.os.toVersion(),
+          [`${HOME_PAGE}/useragent/os/version`]: Number(userAgent.os.major),
         },
       },
       object: {
