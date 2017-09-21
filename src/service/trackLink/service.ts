@@ -9,7 +9,7 @@ export default (config: Config): Signature => {
       actor: {
         account: {
           homePage: 'https://github.com/LearningLocker/url-shortener',
-          name: defaultTo(ipAddress, 'unknown'),
+          name: defaultTo('unknown', ipAddress),
         },
       },
       object: {
