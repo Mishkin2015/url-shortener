@@ -18,13 +18,11 @@ export default (config: Config): Signature => {
         extensions: {
           [`${HOME_PAGE}/useragent/source`]: userAgent.source,
           [`${HOME_PAGE}/useragent/device/family`]: userAgent.device.family,
-          [`${HOME_PAGE}/useragent/device/patch`]: userAgent.device.patch,
-          [`${HOME_PAGE}/useragent/device/minor`]: userAgent.device.minor,
-          [`${HOME_PAGE}/useragent/device/major`]: userAgent.device.major,
+          [`${HOME_PAGE}/useragent/device/source`]: userAgent.device.toString(),
+          [`${HOME_PAGE}/useragent/device/version`]: userAgent.device.toVersion(),
           [`${HOME_PAGE}/useragent/os/family`]: userAgent.os.family,
-          [`${HOME_PAGE}/useragent/os/patch`]: userAgent.os.patch,
-          [`${HOME_PAGE}/useragent/os/minor`]: userAgent.os.minor,
-          [`${HOME_PAGE}/useragent/os/major`]: userAgent.os.major,
+          [`${HOME_PAGE}/useragent/os/source`]: userAgent.os.toString(),
+          [`${HOME_PAGE}/useragent/os/version`]: userAgent.os.toVersion(),
         },
       },
       object: {
