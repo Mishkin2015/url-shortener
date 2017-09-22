@@ -45,6 +45,7 @@
     "commander": "^2.11.0",
     "dotenv": "^4.0.0",
     "express": "^4.14.1",
+    "iplocation": "^5.0.0",
     "jscommons": "git+https://git@github.com/HT2-Labs/jscommons.git",
     "knex": "^0.13.0",
     "mocha": "^3.5.3",
