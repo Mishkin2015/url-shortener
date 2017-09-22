@@ -13,6 +13,6 @@ declare module 'iplocation' {
     metro_code: number;
   }
 
-  const x: (ipAddress?: string) => IpLocation;
+  const x: (ipAddress?: string) => Promise<IpLocation>;
   export = x;
 }
