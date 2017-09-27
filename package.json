@@ -46,7 +46,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.14.1",
     "iplocation": "^5.0.0",
-    "jscommons": "git+https://git@github.com/HT2-Labs/jscommons.git",
+    "jscommons": "^1.0.1",
     "knex": "^0.13.0",
     "mocha": "^3.5.3",
     "mysql": "^2.14.1",
