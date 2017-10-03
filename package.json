@@ -48,7 +48,7 @@
     "iplocation": "^5.0.0",
     "jscommons": "^1.0.1",
     "knex": "^0.13.0",
-    "mocha": "^3.5.3",
+    "mocha": "^4.0.0",
     "mysql": "^2.14.1",
     "node-fetch": "^1.7.3",
     "ramda": "^0.24.1",
