@@ -19,7 +19,7 @@
     "commit": "git-cz",
     "build": "tsc",
     "start": "node dist/presenter/express/server.js",
-    "test": "mocha $(find dist -name '*.test.js') --timeout 6000",
+    "test": "mocha $(find dist -name '*.test.js') --timeout 6000 --exit",
     "cover": "nyc --lines 100 --check-coverage --exclude '(dist/utils/config.js)' npm run test",
     "clean": "rimraf dist",
     "rollback": "node dist/rollback.js",
