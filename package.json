@@ -78,7 +78,7 @@
     "semantic-release": "8.1.2",
     "supertest": "3.0.0",
     "tslint": "5.7.0",
-    "tslint-consistent-codestyle": "1.7.0",
+    "tslint-consistent-codestyle": "1.8.0",
     "tslint-immutable": "4.4.0",
     "typescript": "2.5.3"
   }
