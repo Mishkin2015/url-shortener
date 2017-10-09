@@ -50,7 +50,7 @@
     "knex": "^0.13.0",
     "mysql": "^2.14.1",
     "node-fetch": "^1.7.3",
-    "ramda": "^0.24.1",
+    "ramda": "^0.25.0",
     "request-ip": "^2.0.2",
     "source-map-support": "^0.5.0",
     "useragent": "^2.2.1"
