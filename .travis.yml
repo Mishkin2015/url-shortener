@@ -19,7 +19,7 @@ script:
   - npm run build
   - npm run cover
   - npm run lint -- -c tslint.travis.json
-  - npm run duplication -- --limit=0.01
+  - npm run duplication -- --limit 10
 after_success:
   - npm prune --production
   - npm run semantic-release

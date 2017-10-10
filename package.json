@@ -72,7 +72,7 @@
     "@types/winston": "^2.3.5",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
-    "jscpd": "git://github.com/ryansmith94/jscpd.git#prepublish",
+    "jscpd": "^0.6.10",
     "nyc": "^11.2.1",
     "rimraf": "^2.6.2",
     "semantic-release": "^8.0.0",
