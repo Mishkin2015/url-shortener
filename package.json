@@ -71,7 +71,7 @@
     "@types/winston": "2.3.6",
     "commitizen": "2.9.6",
     "cz-conventional-changelog": "2.0.0",
-    "jscpd": "^0.6.15",
+    "jscpd": "0.6.15",
     "mocha": "4.0.1",
     "nyc": "11.2.1",
     "rimraf": "2.6.2",
