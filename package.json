@@ -59,7 +59,7 @@
     "@types/commander": "2.11.0",
     "@types/dotenv": "4.0.1",
     "@types/express": "4.0.37",
-    "@types/knex": "0.0.62",
+    "@types/knex": "0.0.63",
     "@types/mocha": "2.2.43",
     "@types/node": "8.0.34",
     "@types/node-fetch": "1.6.7",
